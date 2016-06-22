@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="aZ6-Fx-zk0">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="qXH-Jm-6JA" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eYN-0s-KuQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1yx-WD-NFe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vxK-Wb-mKe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lHw-b6-HlI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CgQ-cx-uhi"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hQE-k1-3Uz">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lHw-b6-HlI" firstAttribute="leading" secondItem="vxK-Wb-mKe" secondAttribute="leading" id="6LM-gJ-bDa"/>
+                            <constraint firstItem="hQE-k1-3Uz" firstAttribute="leading" secondItem="vxK-Wb-mKe" secondAttribute="leading" id="BaC-Aw-Cf6"/>
+                            <constraint firstItem="lHw-b6-HlI" firstAttribute="top" secondItem="vxK-Wb-mKe" secondAttribute="top" id="IUe-fk-1cp"/>
+                            <constraint firstItem="1yx-WD-NFe" firstAttribute="top" secondItem="hQE-k1-3Uz" secondAttribute="bottom" id="Iow-bv-P2R"/>
+                            <constraint firstAttribute="trailing" secondItem="hQE-k1-3Uz" secondAttribute="trailing" id="Z6T-1r-fwe"/>
+                            <constraint firstItem="hQE-k1-3Uz" firstAttribute="top" secondItem="lHw-b6-HlI" secondAttribute="bottom" id="nui-vE-jMN"/>
+                            <constraint firstAttribute="trailing" secondItem="lHw-b6-HlI" secondAttribute="trailing" id="oWa-eg-njY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySearchBar" destination="lHw-b6-HlI" id="cem-oW-v9A"/>
+                        <outlet property="showTab" destination="hQE-k1-3Uz" id="3fn-T5-lZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCn-cx-Kda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="184"/>
+        </scene>
+    </scenes>
+</document>
